@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>The Crew</title>
+  <meta name="author" content="Srikanth Kasukurthi">
+   <link rel="shortcut icon" type="image/png" href="img/favicon.jpg"/>
+  <link rel="stylesheet" type="text/css" media="all" href="css/team.css">
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+<div id="demo_back">
+<a href="index.html" class="lpanel">BACK TO main page </a>
+<a href="feedback.html" class="rpanel"> Contact us </a>
+</div>
+
+  <div id="w">
+    <h1>Meet the Team</h1>
+    <p>Click any of the team member's photos to show more details.</p>
+    
+    <div id="teamcontent" class="clearfix">
+      <img src="img/default-photo.jpg" class="bigimg" width="225" height="260">
+      <div id="teamdetails">
+        <h2 id="bigname">Name</h2>
+        <h3 id="bigjob">Title</h3>
+        <p id="bigdesc">A brief description.</p>
+        
+      </div>
+    </div>
+    
+    <ul class="team clearfix">
+      <li>
+        <img src="img/default-photo.jpg" alt="Dileep" width="130" height="150" class="profilepic">
+        <span class="hcontent job">Captain</span>
+        <span class="hcontent desc">Google student Ambassador, SNIST. </span>
+      </li>
+      
+      <li>
+        <img src="img/default-photo.jpg" alt="Vishal" width="130" height="150" class="profilepic">
+        <span class="hcontent job">Quarter Master</span>
+        <span class="hcontent desc">Organizing head, GSC-SNIST</span>
+      </li>
+      
+      <li>
+        <img src="img/default-photo.jpg" alt="Srikanth" width="130" height="150" class="profilepic">
+        <span class="hcontent job">Master Gunner</span>
+        <p class="hcontent desc">pretty much <strong>crazy</strong> beware</p>
+      </li>
+      
+      <li>
+        <img src="img/default-photo.jpg" alt="Pranay" width="130" height="150" class="profilepic">
+        <span class="hcontent job">Cook</span>
+        <span class="hcontent desc">Cooks Creativity</span>
+      </li>
+	  <li>
+        <img src="img/default-photo.jpg" alt="Aaradhana" width="130" height="150" class="profilepic">
+        <span class="hcontent job">Navigator</span>
+        <span class="hcontent desc">Publicity incharge</span>
+      </li>
+	  <li>
+        <img src="img/default-photo.jpg" alt="Kavitha" width="130" height="150" class="profilepic">
+        <span class="hcontent job">Boatswain</span>
+        <span class="hcontent desc">Documentation</span>
+      </li>
+    </ul>
+  </div>
+<script type="text/javascript">
+$(function(){
+  $('.profilepic').on('click', function(e){
+    var $biginfo = $('#teamcontent');
+    var $bigname = $('#bigname');
+    var $bigjob  = $('#bigjob');
+    var $bigdesc = $('#bigdesc');
+    
+    var newname = $(this).attr('alt');
+    var newrole = $(this).siblings('.job').eq(0).html();
+    var newdesc = $(this).siblings('.desc').eq(0).html();
+    
+    $bigname.html(newname);
+    $bigjob.html(newrole);
+    $bigdesc.html(newdesc);
+    
+    
+    if($biginfo.css('display') == 'none') {
+      $biginfo.slideDown(350);
+    }
+    
+    
+  });
+});
+</script>
+</body>
+</html>

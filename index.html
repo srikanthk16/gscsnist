@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Google Student Club-SNIST</title>
+	   <link rel="shortcut icon" type="image/png" href="img/favicon.jpg"/>
+       <link rel="stylesheet" href="css/style.css"/>
+       <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+       <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+       <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+		<script>
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 5000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+    </head>
+<body>
+<div id="demo_back">
+<a href="#" class="lpanel"> Main Page</a>
+<a href="#" class="rpanel"> Main Page </a>
+</div>
+
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> GSC-Home </a></div>
+<nav id="nav">
+    <ul>
+    <li><a href="#moto" class="active" title="moto" >About us</a></li>
+    <li><a href="#works" title="works">Works</a></li>
+    <li><a href="#crew" title="pirates">Crew</a></li>
+    <li><a  href="#join" title="joinus">Join us</a></li>
+    <li><a href="#feedback" title="feedback">Feedback</a></li>
+    </ul>
+</nav>
+</div>
+</header>
+ <div id="moto">
+        <div class="content">
+             <h2>About</h2>
+            <h1>GSC-SNIST</h1>
+            <div id="divider"> </div>
+             <h3>Googliness around SNIST, happens with us and we make it fun with our workshops and events</h3> 
+			 <div id="google"></div>
+        </div>
+    </div>
+    <div id="works">
+        <div class="content">
+            <div class="quotes_container">
+            <h3 class="quotes">"We conduct Hackathons, workshops and many other events, stay tuned here for updates"</h3>
+          <img src="img/gsc.jpg" align="left"/> <h4 class="author_name_gray">GSC </h4>
+        </div>
+        </div>
+    </div>
+   <div id="crew">
+        <div class="content">
+               <div class="quotes_container">
+               <h3 class="quotes">"A small team of dreamers,pirates and makers, may be it sounds annoying but we are head over for our crew page for more details"</h3>
+              <img src="img/pirate.jpg" align="left"/> <a href="crew.html"><h4 class="author_name_white">GSC Crew</h4></a>
+            </div>
+        </div>
+    </div>
+    <div id="join">
+        <div class="content">
+              <div class="quotes_container">
+            <h3 class="quotes">"Registrations Closed, stay tuned for updates"</h3>
+          <img src="img/troll.png" align="left"/> <h4 class="author_name_gray">just stay put </h4>
+        </div>
+        </div>
+    </div>
+    <div id="feedback">
+        <div class="content">
+           <div class="quotes_container">
+            <h3 class="quotes">"To be the best, we need your feedback. So please provide your valuable suggestions and ideas for us"</h3>
+            <li><img src="img/feedback.jpg" align="left"/><a href="feedback.html"><h4 class="author_name_white">Feedback</h4></a>
+          </div>
+        <div id="copyright"><a href="http://www.github.com/cubelabs">Copyright Cube Labs 2014 </a></div>
+		        </div>
+    </div>
+</body>
+</html>
